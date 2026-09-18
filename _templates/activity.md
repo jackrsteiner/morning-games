@@ -1,7 +1,6 @@
 ---
 title: Game name
 summary: One sentence explaining the game and what makes it useful.
-duration: 7 minutes
 age_range: 3–8
 energy: Medium
 focus:
@@ -18,11 +17,7 @@ resources:
 
 ## How to play
 
-Write the complete seven-minute activity here. Keep the instructions easy to scan while an adult is playing with a child.
-
-1. **Minute 0–1:** Begin with...
-2. **Minute 1–6:** Continue with...
-3. **Minute 6–7:** Finish with...
+Write the complete activity here. Keep the instructions brief and easy to scan while an adult is playing with a child. The collection already establishes the duration, so do not repeat it here.
 
 ## Make it easier
 
@@ -31,4 +26,3 @@ Offer a lower-demand or lower-energy variation.
 ## Make it harder
 
 Offer a variation for children who want more challenge.
-
