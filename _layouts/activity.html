@@ -31,9 +31,7 @@ layout: default
   {% if page.focus %}
     <section class="activity__skills" aria-labelledby="skills-title">
       <h2 id="skills-title">Helps with</h2>
-      <ul class="tags">
-        {% for skill in page.focus %}<li>{{ skill }}</li>{% endfor %}
-      </ul>
+      {% include skill-badges.html skills=page.focus %}
     </section>
   {% endif %}
 
