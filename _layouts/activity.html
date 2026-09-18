@@ -1,0 +1,71 @@
+---
+layout: default
+---
+
+<article class="activity">
+  <a class="back-link" href="{{ '/' | relative_url }}">← All morning games</a>
+
+  <header class="activity__header">
+    <p class="eyebrow">Morning game</p>
+    <h1>{{ page.title }}</h1>
+    <p class="activity__summary">{{ page.summary }}</p>
+
+    <dl class="activity__facts">
+      <div>
+        <dt>Time</dt>
+        <dd>{{ page.duration | default: "7 minutes" }}</dd>
+      </div>
+      {% if page.age_range %}
+        <div>
+          <dt>Ages</dt>
+          <dd>{{ page.age_range }}</dd>
+        </div>
+      {% endif %}
+      {% if page.energy %}
+        <div>
+          <dt>Energy</dt>
+          <dd>{{ page.energy }}</dd>
+        </div>
+      {% endif %}
+    </dl>
+  </header>
+
+  {% if page.focus %}
+    <section class="activity__skills" aria-labelledby="skills-title">
+      <h2 id="skills-title">Helps with</h2>
+      <ul class="tags">
+        {% for skill in page.focus %}<li>{{ skill }}</li>{% endfor %}
+      </ul>
+    </section>
+  {% endif %}
+
+  {% if page.materials %}
+    <section aria-labelledby="materials-title">
+      <h2 id="materials-title">What you need</h2>
+      <ul>
+        {% for item in page.materials %}<li>{{ item }}</li>{% endfor %}
+      </ul>
+    </section>
+  {% endif %}
+
+  <section class="activity__instructions" aria-label="Game instructions">
+    {{ content }}
+  </section>
+
+  {% if page.resources %}
+    <section class="downloads" aria-labelledby="downloads-title">
+      <h2 id="downloads-title">Resources</h2>
+      <ul>
+        {% for resource in page.resources %}
+          <li>
+            <a href="{{ resource.url | relative_url }}"{% if resource.download %} download{% endif %}>
+              {{ resource.label }}
+            </a>
+            {% if resource.description %}<span>{{ resource.description }}</span>{% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endif %}
+</article>
+
