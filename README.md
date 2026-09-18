@@ -19,7 +19,7 @@ The home page reads the `_activities` collection, sorts titles alphabetically, c
 | `summary` | Yes | Brief description shown on the index card |
 | `age_range` | No | Suggested ages, without the word “Ages” |
 | `energy` | No | For example `Low`, `Medium`, or `High` |
-| `focus` | No | List of skills practiced |
+| `focus` | No | List of keys from `_data/skills.yml` |
 | `materials` | No | List of anything the adult should gather |
 | `resources` | No | Download links; each can have `label`, `url`, `download`, and `description` |
 

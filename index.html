@@ -50,9 +50,7 @@ title: Morning Games
         <p>{{ game.summary }}</p>
 
         {% if game.focus %}
-          <ul class="tags" aria-label="Skills practiced">
-            {% for skill in game.focus %}<li>{{ skill }}</li>{% endfor %}
-          </ul>
+          {% include skill-badges.html skills=game.focus %}
         {% endif %}
 
         {% if game.resources %}
