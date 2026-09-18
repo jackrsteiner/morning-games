@@ -1,0 +1,44 @@
+visual-attention:
+  label: Visual attention
+  icon: "👀"
+
+left-right-coordination:
+  label: Left-right awareness and bilateral coordination
+  icon: "↔️"
+
+fine-motor-control:
+  label: Fine motor control
+  icon: "🤏"
+
+working-memory:
+  label: Working memory
+  icon: "🧠"
+
+body-awareness:
+  label: Body awareness
+  icon: "🧍"
+
+balance:
+  label: Balance
+  icon: "⚖️"
+
+whole-body-coordination:
+  label: Whole-body coordination
+  icon: "🤸"
+
+impulse-control:
+  label: Impulse control
+  icon: "🛑"
+
+deliberate-movement:
+  label: Calm, deliberate movement
+  icon: "🐢"
+
+proprioception:
+  label: Proprioception and position sense
+  icon: "🧭"
+
+sustained-attention:
+  label: Sustained attention
+  icon: "🎯"
+
