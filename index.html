@@ -46,12 +46,6 @@ title: Morning Games
       {% endif %}
 
       <article class="game-card">
-        {% if game.age_range or game.energy %}
-          <div class="game-card__topline">
-            {% if game.age_range %}<span>Ages {{ game.age_range }}</span>{% endif %}
-            {% if game.energy %}<span>{{ game.energy }} energy</span>{% endif %}
-          </div>
-        {% endif %}
         <h3><a href="{{ game.url | relative_url }}">{{ game.title }}</a></h3>
         <p>{{ game.summary }}</p>
 
