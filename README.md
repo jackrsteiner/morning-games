@@ -1,6 +1,6 @@
 # Morning Games
 
-A GitHub Pages collection of seven-minute games that help children with focus, body awareness, calm, and connection.
+A collection of simple 7-minute parent-child movement games for young children. Each game is one continuous activity designed to make it fun to practice attention, balance, coordination, body awareness, impulse control, and calm, deliberate movement.
 
 ## Add a game
 
@@ -32,4 +32,3 @@ bundle exec jekyll serve
 ```
 
 Then open `http://localhost:4000/morning-games/`.
-
