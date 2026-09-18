@@ -1,0 +1,20 @@
+<div class="skill-badge-set" data-skill-badge-set>
+  <ul class="skill-badges" aria-label="Skills practiced">
+    {% for skill_key in include.skills %}
+      {% assign skill = site.data.skills[skill_key] %}
+      {% if skill %}
+        <li>
+          <button
+            class="skill-badge"
+            type="button"
+            aria-label="{{ skill.label | escape }}"
+            aria-pressed="false"
+            data-skill-label="{{ skill.label | escape }}"
+          ><span aria-hidden="true">{{ skill.icon }}</span></button>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+  <p class="skill-badge-label" aria-live="polite" hidden></p>
+</div>
+
