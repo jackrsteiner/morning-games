@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4a261">
+    <meta name="description" content="{{ page.description | default: site.description | escape }}">
+    <title>{% if page.title and page.title != site.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="site-name" href="{{ '/' | relative_url }}" aria-label="Morning Games home">
+        <span class="site-name__sun" aria-hidden="true"></span>
+        <span>Morning Games</span>
+      </a>
+    </header>
+
+    <main class="site-main">
+      {{ content }}
+    </main>
+
+    <footer class="site-footer">
+      <p>Short games for brighter mornings.</p>
+    </footer>
+  </body>
+</html>
+
