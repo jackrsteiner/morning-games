@@ -4,11 +4,10 @@ summary: Match paired hand signs with both hands to “unlock” a doorway.
 age_range: 3+
 energy: Low
 focus:
-  - Visual attention
-  - Left-right awareness
-  - Bilateral coordination
-  - Fine motor control
-  - Working memory
+  - visual-attention
+  - left-right-coordination
+  - fine-motor-control
+  - working-memory
 materials:
   - Printed hand-gesture cards
   - Removable tape or reusable adhesive
@@ -28,4 +27,3 @@ Print and cut out the gesture cards. Attach them to a door at child height in tw
 Start at the top pair. Copy the left card with your left hand and the right card with your right hand, then press both hands against the matching cards at the same time.
 
 Move down one pair at a time, singing a higher note with each press. Then return upward with descending notes. Complete the sequence to “unlock” the door.
-
