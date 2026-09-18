@@ -17,12 +17,13 @@ The home page reads the `_activities` collection, sorts titles alphabetically, c
 | --- | --- | --- |
 | `title` | Yes | Display name and alphabetical position |
 | `summary` | Yes | Brief description shown on the index card |
-| `duration` | No | Defaults to `7 minutes` |
 | `age_range` | No | Suggested ages, without the word “Ages” |
 | `energy` | No | For example `Low`, `Medium`, or `High` |
 | `focus` | No | List of skills practiced |
 | `materials` | No | List of anything the adult should gather |
 | `resources` | No | Download links; each can have `label`, `url`, `download`, and `description` |
+
+The seven-minute duration is established by the collection itself. Do not repeat it in an activity's front matter or instructions.
 
 ## Preview locally
 
