@@ -3,7 +3,7 @@ visual-attention:
   icon: "👀"
 
 left-right-coordination:
-  label: Left-right awareness and bilateral coordination
+  label: Left-right, bilateral, and cross-body coordination
   icon: "↔️"
 
 fine-motor-control:
@@ -41,4 +41,8 @@ proprioception:
 sustained-attention:
   label: Sustained attention
   icon: "🎯"
+
+cooperative-movement:
+  label: Cooperative movement control
+  icon: "🤝"
 
