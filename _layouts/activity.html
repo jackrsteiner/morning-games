@@ -10,24 +10,22 @@ layout: default
     <h1>{{ page.title }}</h1>
     <p class="activity__summary">{{ page.summary }}</p>
 
-    <dl class="activity__facts">
-      <div>
-        <dt>Time</dt>
-        <dd>{{ page.duration | default: "7 minutes" }}</dd>
-      </div>
-      {% if page.age_range %}
-        <div>
-          <dt>Ages</dt>
-          <dd>{{ page.age_range }}</dd>
-        </div>
-      {% endif %}
-      {% if page.energy %}
-        <div>
-          <dt>Energy</dt>
-          <dd>{{ page.energy }}</dd>
-        </div>
-      {% endif %}
-    </dl>
+    {% if page.age_range or page.energy %}
+      <dl class="activity__facts">
+        {% if page.age_range %}
+          <div>
+            <dt>Ages</dt>
+            <dd>{{ page.age_range }}</dd>
+          </div>
+        {% endif %}
+        {% if page.energy %}
+          <div>
+            <dt>Energy</dt>
+            <dd>{{ page.energy }}</dd>
+          </div>
+        {% endif %}
+      </dl>
+    {% endif %}
   </header>
 
   {% if page.focus %}
@@ -68,4 +66,3 @@ layout: default
     </section>
   {% endif %}
 </article>
-
