@@ -1,0 +1,83 @@
+---
+layout: default
+title: Morning Games
+---
+
+{% assign games = site.activities | sort_natural: "title" %}
+
+<section class="hero">
+  <p class="eyebrow">Seven minutes to a steadier start</p>
+  <h1>Morning Games</h1>
+  <p class="hero__intro">
+    A growing collection of short, playful movement games for children and their grown-ups.
+    Each game is designed to take about seven minutes and support attention, body awareness,
+    calm, and connection before the day gets going.
+  </p>
+</section>
+
+{% if games.size > 0 %}
+  {% capture available_letters %}|{% for game in games %}{{ game.title | slice: 0, 1 | upcase }}|{% endfor %}{% endcapture %}
+  {% assign alphabet = "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z" | split: "," %}
+
+  <nav class="alphabet" aria-label="Jump to games by first letter">
+    {% for letter in alphabet %}
+      {% capture letter_token %}|{{ letter }}|{% endcapture %}
+      {% if available_letters contains letter_token %}
+        <a href="#letter-{{ letter | downcase }}">{{ letter }}</a>
+      {% else %}
+        <span aria-hidden="true">{{ letter }}</span>
+      {% endif %}
+    {% endfor %}
+  </nav>
+
+  <div class="game-directory">
+    {% assign current_letter = "" %}
+    {% for game in games %}
+      {% assign first_letter = game.title | slice: 0, 1 | upcase %}
+      {% if first_letter != current_letter %}
+        {% unless forloop.first %}
+            </div>
+          </section>
+        {% endunless %}
+        <section class="letter-group" id="letter-{{ first_letter | downcase }}">
+          <h2>{{ first_letter }}</h2>
+          <div class="card-grid">
+        {% assign current_letter = first_letter %}
+      {% endif %}
+
+      <article class="game-card">
+        <div class="game-card__topline">
+          <span>{{ game.duration | default: "7 minutes" }}</span>
+          {% if game.age_range %}<span>Ages {{ game.age_range }}</span>{% endif %}
+        </div>
+        <h3><a href="{{ game.url | relative_url }}">{{ game.title }}</a></h3>
+        <p>{{ game.summary }}</p>
+
+        {% if game.focus %}
+          <ul class="tags" aria-label="Skills practiced">
+            {% for skill in game.focus %}<li>{{ skill }}</li>{% endfor %}
+          </ul>
+        {% endif %}
+
+        {% if game.resources %}
+          <div class="card-resources" aria-label="Downloads">
+            {% for resource in game.resources %}
+              <a href="{{ resource.url | relative_url }}"{% if resource.download %} download{% endif %}>{{ resource.label }}</a>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </article>
+
+      {% if forloop.last %}
+          </div>
+        </section>
+      {% endif %}
+    {% endfor %}
+  </div>
+{% else %}
+  <section class="empty-state">
+    <h2>The first games are on their way</h2>
+    <p>This collection will soon contain simple, seven-minute activities you can use one at a time.</p>
+  </section>
+{% endif %}
+

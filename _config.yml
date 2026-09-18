@@ -1,0 +1,24 @@
+title: Morning Games
+description: Seven-minute movement games that help children settle, connect, and focus.
+url: ""
+baseurl: "/morning-games"
+
+collections:
+  activities:
+    output: true
+    permalink: /games/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: activities
+    values:
+      layout: activity
+
+exclude:
+  - AGENTS.md
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - _templates
+
