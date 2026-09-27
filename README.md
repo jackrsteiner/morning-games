@@ -6,10 +6,13 @@ A collection of simple 7-minute parent-child movement games for young children. 
 
 1. Copy `_templates/activity.md` to `_activities/a-short-name.md`.
 2. Replace the front matter and instructions. The filename becomes the page URL.
-3. Put optional downloads in `assets/resources/` and reference them from `resources`.
-4. Commit and push to `main`. GitHub Pages rebuilds the site automatically.
+3. Add the filename, without `.md`, to `_data/activity_numbers.yml` using the next unused number.
+4. Put optional downloads in `assets/resources/` and reference them from `resources`.
+5. Commit and push to `main`. GitHub Pages rebuilds the site automatically.
 
 The home page reads the `_activities` collection, sorts titles alphabetically, creates the letter sections, and adds available-letter jump links. Do not edit the index to register a game.
+
+Activity numbers are permanent creation identifiers stored separately in `_data/activity_numbers.yml`. Editing an activity or changing its title does not change its number.
 
 ## Fields
 

@@ -2,11 +2,14 @@
 layout: default
 ---
 
+{% assign activity_key = page.path | split: "/" | last | remove: ".md" %}
+{% assign activity_number = site.data.activity_numbers[activity_key] %}
+
 <article class="activity">
   <a class="back-link" href="{{ '/' | relative_url }}">← All morning games</a>
 
   <header class="activity__header">
-    <p class="eyebrow">Morning game</p>
+    <p class="eyebrow">Morning game{% if activity_number %} · No. {{ activity_number }}{% endif %}</p>
     <h1>{{ page.title }}</h1>
     <p class="activity__summary">{{ page.summary }}</p>
 

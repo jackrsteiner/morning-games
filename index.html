@@ -46,6 +46,9 @@ title: Morning Games
       {% endif %}
 
       <article class="game-card">
+        {% assign game_key = game.path | split: "/" | last | remove: ".md" %}
+        {% assign game_number = site.data.activity_numbers[game_key] %}
+        {% if game_number %}<p class="game-number">Game {{ game_number }}</p>{% endif %}
         <h3><a href="{{ game.url | relative_url }}">{{ game.title }}</a></h3>
         <p>{{ game.summary }}</p>
 

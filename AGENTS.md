@@ -8,5 +8,6 @@
 - Use only skill keys defined in `_data/skills.yml`; add a reusable definition there before introducing a new skill.
 - Do not manually add games to `index.html`; the collection is discovered and alphabetized automatically.
 - Use short, descriptive, lowercase filenames with hyphens.
+- Register every game in `_data/activity_numbers.yml` with the next unused number. Never renumber an existing game when its file or title changes.
 - Preserve plain language, accessibility, mobile layout, and reduced-motion support.
 - Before committing structural or styling changes, preview the index and at least one activity page.
