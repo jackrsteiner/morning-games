@@ -48,8 +48,10 @@ title: Morning Games
       <article class="game-card">
         {% assign game_key = game.path | split: "/" | last | remove: ".md" %}
         {% assign game_number = site.data.activity_numbers[game_key] %}
-        {% if game_number %}<p class="game-number">Game {{ game_number }}</p>{% endif %}
-        <h3><a href="{{ game.url | relative_url }}">{{ game.title }}</a></h3>
+        <div class="game-card__header">
+          <h3><a href="{{ game.url | relative_url }}">{{ game.title }}</a></h3>
+          {% if game_number %}<span class="game-number" aria-label="Game number {{ game_number }}">#{{ game_number }}</span>{% endif %}
+        </div>
         <p>{{ game.summary }}</p>
 
         {% if game.focus %}
