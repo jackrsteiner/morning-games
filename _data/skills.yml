@@ -46,3 +46,7 @@ cooperative-movement:
   label: Cooperative movement control
   icon: "🤝"
 
+
+breath-control:
+  label: Breath control
+  icon: "🌬️"
